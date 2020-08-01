@@ -1,0 +1,34 @@
+RewriteEngine On
+
+#viết rewrite cho trang chi tiết sản phẩm
+#cần xác định các giá trị động để dùng biểu thức regex tương ứng
+#.* -> đại diệ cho ký tự bất kỳ, xuất hiện ít nhất 1 lần trở lên
+#[0-9]{1,}: chỉ các ký tự số, xuất hiện ít nhất 1 lần
+#có thể dùng regex để bắt validate luôn cho các tham số
+#mà ko cần bắt trực tiếp trong code PHP
+#Cú pháp: RewriteRule <link-giả> <link-mvc-thật>
+#Trong link-giả có bao nhiêu chuỗi regex thì tương ứng
+#trong link-thật sẽ sử dụng ký tự $<vi-trí-regex-của-link-giả>
+#để đón lấy giá trị tương ứng
+RewriteRule chi-tiet-san-pham/(.*)/([0-9]{1,}) index.php?controller=product&action=detail&slug=$1&id=$2
+#rule cho trang Danh sách sản phẩm
+#do e đang dùng rewrite url, nên cần phải xem trong file .htaccess này đang gọi đến
+#controller nào và action nào xử lý
+#url hiện tại của e đang là: //danh-sach-san-pham
+#thì nó đang đúng với cái RewriteRule bên dưới
+RewriteRule danh-sach-san-pham index.php?controller=product&action=index
+
+#rule cho trang thêm vào giỏ hàng
+RewriteRule them-vao-gio-hang/([0-9]{1,}) index.php?controller=cart&action=add&id=$1
+#rule cho trang Giỏ hàng của bạn
+RewriteRule gio-hang-cua-ban index.php?controller=cart&action=index
+#rule cho trang xóa sản phẩm trong giỏ hàng
+RewriteRule xoa-san-pham/([0-9]{1,}) index.php?controller=cart&action=delete&id=$1
+#rule cho trang thanh toán
+RewriteRule thanh-toan index.php?controller=payment&action=index
+
+RewriteRule cam-on index.php?controller=payment&action=thank
+RewriteRule thanh-toan-truc-tuyen index.php?controller=payment&action=online
+RewriteRule tin-tuc index.php?controller=news&action=news
+RewriteRule contact-us index.php?controller=client&action=index
+RewriteRule about-our index.php?controller=about&action=about
