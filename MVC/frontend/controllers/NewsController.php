@@ -6,4 +6,10 @@ class NewsController extends Controller{
             $this->render('views/news/index.php');
         require_once 'views/layouts/main.php';
     }
+    public function newsDetail(){
+        $this->content =
+            $this->render('views/news/news_detail.php');
+        require_once 'views/layouts/main.php';
+    }
+
 }

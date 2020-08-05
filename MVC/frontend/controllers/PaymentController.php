@@ -16,9 +16,6 @@ class PaymentController extends Controller{
     {
         //xử lý submit form khi user click THanh toán
         //debug thông tin mảng $_POST
-        echo "<pre>";
-        print_r($_POST);
-        echo "</pre>";
         //nếu user click nút Thanh toán/submit form thì mới xử lý
         if (isset($_POST['submit'])) {
             //gán biến trung gian cho dễ thao tác
@@ -78,7 +75,7 @@ class PaymentController extends Controller{
                         $order_detail_model->product_id = $product_id;
                         $order_detail_model->quality = $cart1['quality'];
                         $is_insert = $order_detail_model->insert();
-                        var_dump($is_insert);
+
                     }
 
                     //dựa vào phương thức thanh toán để quyết định

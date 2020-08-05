@@ -223,14 +223,6 @@ class CategoryController extends Controller{
         require_once 'views/layouts/main.php';
 
     }
-    public function getCategoryById($id)
-    {
-        $obj_select = $this->connection
-            ->prepare("SELECT * FROM categories WHERE id = $id");
-        $obj_select->execute();
-        $category = $obj_select->fetch(PDO::FETCH_ASSOC);
 
-        return $category;
-    }
 
 }

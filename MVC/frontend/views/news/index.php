@@ -5,7 +5,7 @@
                 <div class="ps-post--2">
                     <div class="ps-post__thumbnail"><a class="ps-post__overlay" href="#"></a><img src="assets/images/1-3.png" alt=""></div>
                     <div class="ps-post__container">
-                        <header class="ps-post__header"><a class="ps-post__title" href="blog-detail.html">Unpacking the Breaking 2 Race Strategy</a>
+                        <header class="ps-post__header"><a class="ps-post__title" href="index.php?controller=news&action=newsDetail">Unpacking the Breaking 2 Race Strategy</a>
                             <p>Posted by <a href="blog-grid.html">Alena Studio</a> on August 17, 2016  in <a href="blog-grid.html">Men Shoes</a> , <a href="blog-grid.html">Stylish</a></p>
                         </header>
                         <div class="ps-post__content">

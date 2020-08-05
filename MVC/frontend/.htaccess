@@ -30,5 +30,6 @@ RewriteRule thanh-toan index.php?controller=payment&action=index
 RewriteRule cam-on index.php?controller=payment&action=thank
 RewriteRule thanh-toan-truc-tuyen index.php?controller=payment&action=online
 RewriteRule tin-tuc index.php?controller=news&action=news
+#RewriteRule tin-tuc-chi-tiet index.php?controller=news&action=newsDetail
 RewriteRule contact-us index.php?controller=client&action=index
 RewriteRule about-our index.php?controller=about&action=about

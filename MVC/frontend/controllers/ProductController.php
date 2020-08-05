@@ -55,6 +55,7 @@ class ProductController extends Controller{
                 $str_price = "($str_price)";
                 $params['str_price'] = $str_price;
             }
+
         }
         $category_model = new Category();
         $categories = $category_model->getAll();
